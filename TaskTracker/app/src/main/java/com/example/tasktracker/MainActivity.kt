@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
                 item-> when(item.itemId){
             R.id.data -> replaceFragment(datafrag)
             R.id.settings -> replaceFragment(settingsfrag)
+            R.id.home -> replaceFragment(homefrag)
         }
             true
         }
