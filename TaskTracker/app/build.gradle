@@ -30,10 +30,17 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    /*
     packagingOptions {
         exclude 'META-INF/atomicfu.kotlin_module'
     }
+     */
 }
+//
+repositories {
+    mavenCentral()
+}
+//
 dependencies {
     implementation "androidx.appcompat:appcompat:$rootProject.appCompatVersion"
     implementation "androidx.activity:activity-ktx:$rootProject.activityVersion"
@@ -43,6 +50,7 @@ dependencies {
 
     // Room components
     implementation "androidx.room:room-ktx:$rootProject.roomVersion"
+    implementation 'androidx.preference:preference:1.1.1'
     kapt "androidx.room:room-compiler:$rootProject.roomVersion"
     androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
 
